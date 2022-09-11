@@ -21,7 +21,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          path:
-            - 'a'
-              'b'
-              'c'
+          path: a::b::c
+          separator: '::'

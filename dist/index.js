@@ -88,8 +88,9 @@ const join_path_1 = __nccwpck_require__(955);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const pathComponents = core.getInput('path');
-            const joined = (0, join_path_1.joinPath)(pathComponents);
+            const path = core.getInput('path');
+            const separator = core.getInput('separator');
+            const joined = (0, join_path_1.joinPath)(path.split(separator));
             core.setOutput('path', joined);
         }
         catch (error) {

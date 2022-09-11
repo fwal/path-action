@@ -3,9 +3,10 @@ import {joinPath} from './join-path'
 
 async function run(): Promise<void> {
   try {
-    const pathComponents: string | string[] = core.getInput('path')
+    const path: string = core.getInput('path')
+    const separator: string = core.getInput('separator')
 
-    const joined = joinPath(pathComponents)
+    const joined = joinPath(path.split(separator))
 
     core.setOutput('path', joined)
   } catch (error) {
