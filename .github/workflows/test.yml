@@ -23,5 +23,5 @@ jobs:
         with:
           path:
             - 'a'
-            - 'b'
-            - 'c'
+              'b'
+              'c'
